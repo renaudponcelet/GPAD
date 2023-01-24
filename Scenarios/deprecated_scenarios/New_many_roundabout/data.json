@@ -1,0 +1,38 @@
+{
+  "awareness": "blind",
+  "time_gap": 2,
+  "margin": 0.15,
+  "cross_security": true,
+  "occlusion_tolerance_detection": 2.0,
+  "nb_actors": 5,
+  "map": "roundabout",
+  "global_path_interval": 1,
+  "time_horizon": 5,
+  "seed": 511,
+  "nb_circles": 2,
+  "random_agent": true, "kool_down_time": 10, "ego_blocked_time": 3,
+  "max_acc": 2.5,
+  "max_acc_emergency": 4.0,
+  "replan_ratio": 4,
+  "list_type_id": [
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2"
+  ],
+  "spawn_point": [-79.0, 50.0, 4.0],
+  "destinations": [[70.5, 22.0, 0.0]],
+  "actors": {
+    "0": {"spawn_point": [75.0, 20.0, 4.0]},
+    "1": {"spawn_point": [-20, -74.0, 4.0]},
+    "2": {"spawn_point": [-19.0, -74.0, 4.0]},
+    "3": {"spawn_point": [62.5, -38.5, 4.0]},
+    "4": {"spawn_point": [35.0, 79.0, 4.0]}
+  },
+  "stop_car": false,
+  "pid_args_lateral": {"K_P": 0.9, "K_D": 0.0, "K_I": 0.0},
+  "pid_args_longitudinal": {"K_P": 6, "K_D": 0.1, "K_I": 0.4},
+  "L": 3.0, "L_control": 5.0,
+  "k_brake": 0.033
+}

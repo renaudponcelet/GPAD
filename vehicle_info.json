@@ -1,0 +1,119 @@
+[
+	{
+		"specific": {
+			"vehicle.audi.a2": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 32.8,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.audi.tt": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 2000,
+				"wheel_radius" : 34.35,
+				"wheel_spacing" : 1.40
+
+			},
+			"vehicle.bmw.grandtourer": {
+				"max_steer_angle": 75,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 36,
+				"wheel_spacing" : 1.40
+			},
+			"ChevroletImpala": {
+				"max_steer_angle": 80,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 30,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.citroen.c3": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 34,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.dodge_charger.police": {
+				"max_steer_angle": 80,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 37,
+				"wheel_spacing" : 1.40
+			},
+			"JeepWranglerRubicon": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 2000,
+				"wheel_radius" : 41.6,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.mercedes-benz.coupe": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 39.5,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.mini.cooperst": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 37.5,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.ford.mustang": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 31.94,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.nissan.micra": {
+				"max_steer_angle": 80,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 34.25,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.nissan.patrol": {
+				"max_steer_angle": 45,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 39,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.seat.leon": {
+				"max_steer_angle": 80,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 33.5,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.toyota.prius": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 1500,
+				"wheel_radius" : 37,
+				"wheel_spacing" : 1.40
+			},
+			"vehicle.volkswagen.t2": {
+				"max_steer_angle": 70,
+				"max_brake_torque": 4000,
+				"wheel_radius" : 35.02,
+				"wheel_spacing" : 1.40
+			}
+		},
+		"general": {
+			"torque" : [[0, 400], [2000, 500], [5729.5, 400]],
+			"max_speed" : 5729.5,
+			"engine_inertia" : 1,
+			"damping_full_throttle" : 0.15,
+			"damping_0_throttle" : 2,
+			"damping_0_throttle_neutral" : 0.35,
+			"gear_ratio" : {
+				"final_ratio" : 4,
+				"ratio_1" : 4,
+				"ratio_2" : 2,
+				"ratio_3" : 1.5,
+				"ratio_4" : 1.1,
+				"ratio_5" : 1,
+				"reverse_ratio" : -4,
+				"down_ratio" : 0.5,
+				"up_ratio" : 0.65
+			},
+			"transmission_strength" : 10,
+			"steering_ratio" : [[0, 1], [20, 0.9], [60, 0.8], [130, 0.7]],
+			"mass" : 1580
+		}
+	}
+]

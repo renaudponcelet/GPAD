@@ -1,0 +1,127 @@
+{"awareness": "omniscient",
+  "time_gap": 2,
+  "margin": 0.15,
+  "tolerance": 0.1,
+  "nb_paths": 6,
+  "cross_security": false,
+  "apf_params": [5, 25, 25, 25],
+  "occlusion_tolerance_detection": 2.0,
+  "nb_actors": 20,
+  "map": "Town02_Opt",
+  "global_path_interval": 0.5,
+  "time_horizon": 6,
+  "seed": 1,
+  "nb_circles": 3,
+  "random_agent": true, "kool_down_time": 10, "ego_blocked_time": 3,
+  "max_acc": 2.5,
+  "max_acc_emergency": 4.0,
+  "replan_ratio": 9,
+
+  "list_type_id": [
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2",
+    "vehicle.audi.a2"
+  ],
+
+  "spawn_point": [-3.5,
+    290,
+    0.5],
+
+  "destinations": [[100.69266700744629,
+    230.5603485107422,
+    0.0]],
+
+  "actors": {"0": {"spawn_point": [174.33004760742188,
+    237.42999267578125,
+    0.5]},
+
+    "1": {"spawn_point": [-3.679999828338623,
+      172.42999267578125,
+      0.5]},
+
+    "2": {"spawn_point": [189.92999267578125,
+      252.3300018310547,
+      0.5]},
+
+    "3": {"spawn_point": [45.23999786376953,
+      291.2900085449219,
+      0.5]},
+
+    "4": {"spawn_point": [189.92999267578125,
+
+      142.19000244140625,
+
+      0.5]},
+
+    "5": {"spawn_point": [135.87998962402344,
+
+      215.26998901367188,
+
+      0.5]},
+
+    "6": {"spawn_point": [37.47003936767578,
+
+      105.5500259399414,
+
+      0.5]},
+
+    "7": {"spawn_point": [173.87005615234375,
+
+      109.40003967285156,
+
+      0.5]},
+
+    "8": {"spawn_point": [14.010019302368164,
+
+      306.41998291015625,
+
+      0.5]},
+
+    "9": {"spawn_point": [88.71001434326172,
+
+      241.27999877929688,
+
+      0.5]},
+
+    "10": {"spawn_point": [27.72001838684082,
+
+      187.9199981689453,
+
+      0.5]},
+
+    "11": {"spawn_point": [193.77999877929688,
+
+      160.5800018310547,
+
+      0.5]},
+
+    "12": {"spawn_point": [59.71002960205078, 241.27999877929688, 0.5]},
+    "13": {"spawn_point": [151.75006103515625, 109.40003967285156, 0.5]},
+    "14": {"spawn_point": [-3.679999828338623, 142.19000244140625, 0.5]},
+    "15": {"spawn_point": [-3.6799514293670654, 158.97999572753906, 0.5]},
+    "16": {"spawn_point": [55.410037994384766, 105.54998779296875, 0.5]},
+    "17": {"spawn_point": [71.53003692626953, 302.57000732421875, 0.5]},
+    "18": {"spawn_point": [132.02999877929688, 211.0, 0.5]},
+    "19": {"spawn_point": [-7.529999732971191, 142.19000244140625, 0.5]}},
+  "stop_car": false,
+  "pid_args_lateral": {"K_P": 0.58, "K_D": 0.02, "K_I": 0.5, "dt": 0.05},
+  "pid_args_longitudinal": {"K_P": 0.15, "K_D": 0.05, "K_I": 0.07, "dt": 0.05},
+  "L": 3.0,
+  "L_control": 5.0
+}
