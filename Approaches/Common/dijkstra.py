@@ -1,30 +1,29 @@
 from collections import defaultdict
 from heapq import heapify, heappush, heappop
 
-
 def weight(node2):
     return node2[1]
 
 
 def dijkstra(graph, origin, destination):
-    D = {}
-    P = {}
-    Q = PriorityDict()
-    Q[origin] = 0
-    for v in Q:
-        D[v] = Q[v]
+    d = {}
+    p = {}
+    q = PriorityDict()
+    q[origin] = 0
+    for v in q:
+        d[v] = q[v]
         if v == destination:
             break
         edges = graph[v]
         for e in edges:
-            e_length = D[v] + weight(e)
-            if e[0] in D:
-                if e_length < D[e[0]]:
+            e_length = d[v] + weight(e)
+            if e[0] in d:
+                if e_length < d[e[0]]:
                     raise ValueError
-            elif e[0] not in Q or e_length < Q[e[0]]:
-                Q[e[0]] = e_length
-                P[e[0]] = v
-    return D, P
+            elif e[0] not in q or e_length < q[e[0]]:
+                q[e[0]] = e_length
+                p[e[0]] = v
+    return d, p
 
 
 class PriorityDict(dict):
@@ -34,7 +33,7 @@ class PriorityDict(dict):
     are their respective priorities. All dictionary methods work as expected.
     The advantage over a standard heapq-based priority queue is that priorities
     of items can be efficiently updated (amortized O(1)) using code as
-    'thedict[item] = new_priority.'
+    'dict[item] = new_priority.'
 
     Note that this is a modified version of
     https://gist.github.com/matteodellamico/4451520 where sorted_iter() has
@@ -112,14 +111,14 @@ class Graph:
         del self.dict[n]
 
     def shortest_path(self, origin, destination):
-        D, P = dijkstra(self.dict, origin, destination)
+        d, p = dijkstra(self.dict, origin, destination)
         path = []
         try:
             while 1:
                 path.append(destination)
                 if destination == origin:
                     break
-                destination = P[destination]
+                destination = p[destination]
         except KeyError:
             return None
         path.reverse()

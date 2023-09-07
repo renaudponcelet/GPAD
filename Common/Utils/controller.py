@@ -11,8 +11,7 @@ from collections import deque
 import carla
 import numpy as np
 
-from PythonAPI.carla.agents.tools.misc import get_speed
-
+from Common.Utils.agents.tools.misc import get_speed
 
 class VehiclePIDController:
     """

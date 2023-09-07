@@ -1,9 +1,9 @@
 import math
 
-import PythonAPI.Approaches.Common.dijkstra as dijkstra
+import GPAD.Approaches.Common.dijkstra as dijkstra
 import numpy as np
 import shapely.geometry
-from PythonAPI.Approaches.Common.visibility_lazy import get_filtered_obstacles, get_holo_path
+from GPAD.Approaches.Common.visibility_lazy import get_filtered_obstacles, get_holo_path
 
 orientationEpsilon = 1
 
@@ -71,7 +71,7 @@ def _get_noholo_path(path_holo, yaw_rate_radius, obstacles):
             center = _get_vertex_circle(vertexId, c, cached_circles, path_holo)["center"]
             prev_vertex = vertexId - 1
             next_vertex = vertexId
-            still_to_test = 2  # 2 : still to test forward, 1 : still to test backward, 0 : nothing to test anymore
+            still_to_test = 2  # 2: still to test forward, 1: still to test backward, 0: nothing to test
             while still_to_test:
                 if still_to_test == 2:
                     next_vertex += 1
@@ -279,8 +279,8 @@ def _get_tangent_segment_between(circle1_center, radius1, circle2_center, radius
         h2 = d / (1 + m)  # distance from circle2Center to middlePoint
     middle_point_x = (h2 * circle1_center[0] + h1 * circle2_center[0]) / d
     middle_point_y = (h2 * circle1_center[1] + h1 * circle2_center[1]) / d
-    point1 = _get_tangent_point(circle1_center, radius1, (middle_point_x, middle_point_y), left)  # @HERE : no not
-    point2 = _get_tangent_point(circle2_center, radius2, (middle_point_x, middle_point_y), left)  # @HERE : no not
+    point1 = _get_tangent_point(circle1_center, radius1, (middle_point_x, middle_point_y), left)  # @HERE: no not
+    point2 = _get_tangent_point(circle2_center, radius2, (middle_point_x, middle_point_y), left)  # @HERE: no not
     return [point1, point2]
 
 

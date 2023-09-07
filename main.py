@@ -15,8 +15,6 @@ import sys
 # -- find carla module ---------------------------------------------------------
 # ==============================================================================
 
-os.chdir('PythonAPI')
-
 try:
     sys.path.append(glob.glob('../carla/dist/carla-*%d.%d-%s.egg' % (
         sys.version_info.major,
@@ -24,17 +22,6 @@ try:
         'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0])
 except IndexError:
     pass
-
-# try:
-#     rootPath = os.path.dirname(os.getcwd())
-#     pythonapiPath = rootPath + '/PythonAPI'
-#     carlaPath = pythonapiPath + '/carla'
-#     gpadPath = pythonapiPath + '/GPAD'
-#     pathList = [rootPath, pythonapiPath, carlaPath, gpadPath]
-#     for path in pathList:
-#         sys.path.append(path)
-# except IndexError:
-#     raise IndexError
 
 # ==============================================================================
 # -- imports -------------------------------------------------------------------
@@ -45,9 +32,9 @@ import argparse
 import logging
 import json
 
-from PythonAPI.GPAD.Common.Utils.HUD import HUD
-from PythonAPI.GPAD.Common.Planner import Planner
-from PythonAPI.GPAD.Common.World import World
+from GPAD.Common.Utils.HUD import HUD
+from GPAD.Common.Planner import Planner
+from GPAD.Common.World import World
 
 try:
     import pygame

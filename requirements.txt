@@ -1,8 +1,10 @@
 future
 numpy; python_version < '3.0'
 numpy==1.18.4; python_version >= '3.0'
-pygame
+pygame~=2.1.2
 matplotlib==3.6.3
-Shapely
+Shapely~=2.0.0
 networkx
-pyvisgraph
+pyvisgraph~=0.2.1
+numpy~=1.24.1
+carla~=0.9.14

@@ -6,15 +6,15 @@ import sys
 import carla
 import numpy as np
 
-from PythonAPI.GPAD.Approaches.ris_path.RIS import RIS
-from PythonAPI.GPAD.Approaches.vis_speed.VisSpeed import VisSpeed
-from PythonAPI.GPAD.Common.Utils.CameraManager import CameraManager
-from PythonAPI.GPAD.Common.Utils.CollisionSensor import CollisionSensor
-from PythonAPI.GPAD.Common.Utils.carla_utils import carla_vector2array_2d, get_nearest_tr
-from PythonAPI.GPAD.Common.Utils.carla_utils import find_weather_presets, get_actor_display_name
-from PythonAPI.GPAD.Common.Utils.utils import OccupancyViewer, norm_x_y, super_dic
-from PythonAPI.GPAD.Common.occupancy_mapper.OccupancyMapper import OccupancyMapper
-from PythonAPI.GPAD.Common.occupancy_mapper.Recorder import Recorder
+from GPAD.Approaches.MMRIS.MMRIS import MMRIS
+from GPAD.Approaches.SGSPA.SGSPA import SGSPA
+from GPAD.Common.Utils.CameraManager import CameraManager
+from GPAD.Common.Utils.CollisionSensor import CollisionSensor
+from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, get_nearest_tr, find_weather_presets, get_actor_display_name
+from GPAD.Common.Utils.utils import norm_x_y, super_dic
+from GPAD.Common.Utils.OccupancyViewer import OccupancyViewer
+from GPAD.Approaches.Common.occupancy_mapper import OccupancyMapper
+from GPAD.Approaches.Common.occupancy_mapper import Recorder
 
 
 class World(object):
@@ -175,7 +175,7 @@ class World(object):
             if waypoint.is_intersection:
                 self.intersection_waypoints.append(waypoint)
         used_spawn_points = []
-        # Keep same camera config if the camera manager exists.
+        # Keep the same camera config if the camera manager exists.
         cam_index = self.camera_manager.index if self.camera_manager is not None else 0
         cam_pos_index = self.camera_manager.transform_index if self.camera_manager is not None else 0
         # Get a random vehicle blueprint.
@@ -282,26 +282,26 @@ class World(object):
         if self.planning_mode == 'unique':
             if 'ris-path' in self.planner_list:
                 self.recorder = Recorder(self)
-                self.RIS = RIS(world=self)
+                self.RIS = MMRIS(world=self)
             elif 'vis-speed' in self.planner_list:
                 self.recorder = Recorder(self)
-                self.VIS = VisSpeed(world=self)
+                self.VIS = SGSPA(world=self)
             else:
                 raise Exception('Wrong planner name')
         elif self.planning_mode is 'parallel':
             if 'ris-path' in self.planner_list:
                 self.recorder = Recorder(self)
-                self.RIS = RIS(world=self)
+                self.RIS = MMRIS(world=self)
             if 'vis-speed' in self.planner_list:
                 if self.recorder is None:
                     self.recorder = Recorder(self)
-                self.VIS = VisSpeed(world=self)
+                self.VIS = SGSPA(world=self)
         else:
             raise Exception('This planning mode does not exist')
 
         actor_type = get_actor_display_name(self.vehicle)
         self.hud.notification(actor_type)
-        # Set up RIS
+        # Set up MMRIS
         # # Spawn actors
         self.actors_list = []
         self.additional_actor = []

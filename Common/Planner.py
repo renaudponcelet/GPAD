@@ -6,16 +6,17 @@ import carla
 import matplotlib.pyplot as plt
 import numpy as np
 import pygame
-from PythonAPI.GPAD.Approaches.ris_path.RISLauncher import RISLauncher
-from PythonAPI.GPAD.Approaches.vis_speed.VISLauncher import VISLauncher
-from PythonAPI.GPAD.Common.Utils.ControlLauncher import Controller
-from PythonAPI.GPAD.Common.Utils.carla_utils import carla_vector2array_2d, array_wp2nd_array
-from PythonAPI.GPAD.Common.Utils.controller import VehiclePIDController
-from PythonAPI.GPAD.Common.Utils.utils import OccupancyViewer, get_lazy_path, get_index_offset, norm_x_y, \
+from GPAD.Approaches.MMRIS.MMRISLauncher import RISLauncher
+from GPAD.Approaches.SGSPA.SGSPALauncher import VISLauncher
+from GPAD.Common.Utils.ControlLauncher import Controller
+from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, array_wp2nd_array
+from GPAD.Common.Utils.controller import VehiclePIDController
+from GPAD.Common.Utils.utils import get_lazy_path, get_index_offset, norm_x_y, \
     find_nearest_vector, PathToShort
-from PythonAPI.GPAD.Common.occupancy_mapper.Tracker import Tracker
-from PythonAPI.GPAD.Common.occupancy_mapper.VirtualVehicleGenerator import VirtualVehicleGenerator
-from PythonAPI.carla.agents.navigation.global_route_planner import GlobalRoutePlanner
+from GPAD.Common.Utils.OccupancyViewer import OccupancyViewer
+from GPAD.Approaches.Common.occupancy_mapper import Tracker
+from GPAD.Approaches.Common.occupancy_mapper.VirtualVehicleGenerator import VirtualVehicleGenerator
+from GPAD.Common.Utils.agents.navigation.global_route_planner import GlobalRoutePlanner
 
 
 class Planner(object):
@@ -57,10 +58,10 @@ class Planner(object):
         self.prev_local_goal = None
         world.vehicle.set_autopilot(self._autopilot_enabled)
         world.hud.notification("Press 'H' or '?' for help.", seconds=4.0)
-        # Here i set the controller
-        # It's based on carla's controller but i modified lateral pid controller in an stanley controller.
-        # For the lateral controller K_P is the only used parameter
-        # To tune the PID i make an identification
+        # Here I set the controller
+        # It's based on carla's controller, but I modified lateral pid controller in a stanley controller.
+        # For the lateral controller, K_P is the only used parameter
+        # To tune the PID I made an identification
         self.selected_plan = None
         dt = 1.0 / fps
         args_lateral = {
