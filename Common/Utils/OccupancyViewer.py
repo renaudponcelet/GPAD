@@ -5,7 +5,7 @@ from matplotlib.figure import Figure
 from matplotlib.patches import Circle, Rectangle
 from matplotlib.pyplot import ion
 
-from Common.Utils.utils import SpeedPlan
+from .utils import SpeedPlan
 
 
 def add_object(dic, any_object, color='#00ff00', frame=0, label=None, screens=None):

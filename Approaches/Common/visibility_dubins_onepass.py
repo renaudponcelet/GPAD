@@ -1,9 +1,9 @@
 import math
 
-import GPAD.Approaches.Common.dijkstra as dijkstra
+import dijkstra
 import numpy as np
 import shapely.geometry
-from GPAD.Approaches.Common.visibility_lazy import get_filtered_obstacles, get_holo_path
+from .visibility_lazy import get_filtered_obstacles, get_holo_path
 
 orientationEpsilon = 1
 

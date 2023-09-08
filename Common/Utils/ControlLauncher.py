@@ -1,7 +1,7 @@
 import carla
 import numpy as np
-from Common.Utils.utils import find_nearest_vector, SpeedPlan
-from Common.Utils.agents.tools.misc import get_speed
+from .utils import find_nearest_vector, SpeedPlan
+from .agents.tools.misc import get_speed
 
 class Controller:
     def __init__(self, planner, dt):

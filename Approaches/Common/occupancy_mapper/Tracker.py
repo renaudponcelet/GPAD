@@ -1,10 +1,10 @@
 import math
 
 import numpy as np
-from GPAD.Common.Utils.carla_utils import carla_vector2array_3d, carla_vector2array_2d, pixel_in_image, \
+from ....Common.Utils.carla_utils import carla_vector2array_3d, carla_vector2array_2d, pixel_in_image, \
     point_is_occluded, world2pixel, get_bounding_box_shape_circles, array_wp2nd_array
-from GPAD.Common.Utils.utils import dist
-from GPAD.Approaches.Common.occupancy_mapper.ReachableSetPredictor import ReachableSetPredictor
+from ....Common.Utils.utils import dist
+from ....Approaches.Common.occupancy_mapper.ReachableSetPredictor import ReachableSetPredictor
 
 
 class Tracker:

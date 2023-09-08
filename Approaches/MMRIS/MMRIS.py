@@ -1,9 +1,9 @@
 import carla
 import numpy as np
-from GPAD.Approaches.Common.visibility_lazy import clean_obstacles
-from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, get_cost, Set, Graph
-from GPAD.Common.Utils.utils import find_paths, path2rs, SpeedPlan, get_projected_polygons, get_realistic_path
-from GPAD.Common.Utils.agents.tools.misc import get_speed
+from ..Common.visibility_lazy import clean_obstacles
+from ...Common.Utils.carla_utils import carla_vector2array_2d, get_cost, Set, Graph
+from ...Common.Utils.utils import find_paths, path2rs, SpeedPlan, get_projected_polygons, get_realistic_path
+from ...Common.Utils.agents.tools.misc import get_speed
 from shapely.geometry import Polygon
 
 

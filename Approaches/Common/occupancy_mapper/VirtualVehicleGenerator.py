@@ -3,10 +3,10 @@ import json
 
 import carla
 import numpy as np
-from GPAD.Common.Utils.carla_utils import dist_location_2d, pixel_in_image, carla_vector2array_3d, \
+from ....Common.Utils.carla_utils import dist_location_2d, pixel_in_image, carla_vector2array_3d, \
     point_is_occluded, carla_vector2array_2d
-from GPAD.Common.Utils.carla_utils import world2pixel
-from GPAD.Common.Utils.utils import dist
+from ....Common.Utils.carla_utils import world2pixel
+from ....Common.Utils.utils import dist
 
 
 class VirtualVehicleGenerator:

@@ -1,6 +1,6 @@
 import carla
 import numpy as np
-from GPAD.Common.Utils.carla_utils import carla_vector2array_2d
+from ....Common.Utils.carla_utils import carla_vector2array_2d
 
 
 def get_reachable_waypoints(world, pos, speed, yaw=None, virtual_mode=False, previous_waypoints=None, behind=False):

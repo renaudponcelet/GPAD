@@ -1,7 +1,7 @@
 import math
 
 import pygame
-from Common.Utils.carla_utils import get_actor_display_name
+from .carla_utils import get_actor_display_name
 
 
 class HUD(object):

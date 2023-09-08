@@ -3,8 +3,8 @@ import re
 
 import carla
 import numpy as np
-from GPAD.Common.Utils.utils import get_visible_exteriors_from_polys, get_index_offset, find_nearest_vector, \
-    get_diff_angle, get_realistic_path
+from .utils import (get_visible_exteriors_from_polys, get_index_offset, find_nearest_vector,
+                    get_diff_angle, get_realistic_path)
 
 
 class Set:

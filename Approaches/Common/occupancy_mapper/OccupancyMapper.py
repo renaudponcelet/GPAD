@@ -3,13 +3,12 @@ import os
 import pickle
 import threading
 
-# import matplotlib.pyplot as plt
 import numpy as np
-from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, get_bounding_box_shape_circles, \
+from ....Common.Utils.carla_utils import carla_vector2array_2d, get_bounding_box_shape_circles, \
     dist_location_2d, lateral_shift
-from GPAD.Common.Utils.utils import path2rs, dist, clean_obstacles, get_secure_dist
-from GPAD.Approaches.Common.occupancy_mapper.ReachableSetGenerator import ReachableSetGenerator
-from GPAD.Approaches.Common.occupancy_mapper.ReachableSetPredictor import get_reachable_waypoints
+from ....Common.Utils.utils import path2rs, dist, clean_obstacles, get_secure_dist
+from ....Approaches.Common.occupancy_mapper.ReachableSetGenerator import ReachableSetGenerator
+from ....Approaches.Common.occupancy_mapper.ReachableSetPredictor import get_reachable_waypoints
 from shapely.geometry import Point, LineString, Polygon
 
 

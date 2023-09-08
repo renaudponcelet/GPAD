@@ -3,7 +3,7 @@ import math
 import weakref
 
 import carla
-from Common.Utils.carla_utils import get_actor_display_name
+from .carla_utils import get_actor_display_name
 
 
 class CollisionSensor(object):

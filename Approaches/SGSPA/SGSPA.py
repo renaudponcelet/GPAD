@@ -1,7 +1,7 @@
 import math
 
 import numpy as np
-from GPAD.Common.Utils.utils import get_projected_polygons, find_nearest_vector, clean_obstacles, \
+from ...Common.Utils.utils import get_projected_polygons, find_nearest_vector, clean_obstacles, \
     get_intersecting_poly, get_cross_max_point, get_cross_min_point, check_collision, get_s_from_speed_plan, \
     get_out_path
 from shapely.geometry import Point, LineString, Polygon

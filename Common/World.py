@@ -6,15 +6,15 @@ import sys
 import carla
 import numpy as np
 
-from GPAD.Approaches.MMRIS.MMRIS import MMRIS
-from GPAD.Approaches.SGSPA.SGSPA import SGSPA
-from GPAD.Common.Utils.CameraManager import CameraManager
-from GPAD.Common.Utils.CollisionSensor import CollisionSensor
-from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, get_nearest_tr, find_weather_presets, get_actor_display_name
-from GPAD.Common.Utils.utils import norm_x_y, super_dic
-from GPAD.Common.Utils.OccupancyViewer import OccupancyViewer
-from GPAD.Approaches.Common.occupancy_mapper import OccupancyMapper
-from GPAD.Approaches.Common.occupancy_mapper import Recorder
+from ..Approaches.MMRIS.MMRIS import MMRIS
+from ..Approaches.SGSPA.SGSPA import SGSPA
+from ..Common.Utils.CameraManager import CameraManager
+from ..Common.Utils.CollisionSensor import CollisionSensor
+from ..Common.Utils.carla_utils import carla_vector2array_2d, get_nearest_tr, find_weather_presets, get_actor_display_name
+from ..Common.Utils.utils import norm_x_y, super_dic
+from ..Common.Utils.OccupancyViewer import OccupancyViewer
+from ..Approaches.Common.occupancy_mapper import OccupancyMapper
+from ..Approaches.Common.occupancy_mapper import Recorder
 
 
 class World(object):

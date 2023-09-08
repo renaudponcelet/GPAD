@@ -31,10 +31,9 @@ import carla
 import argparse
 import logging
 import json
-
-from GPAD.Common.Utils.HUD import HUD
-from GPAD.Common.Planner import Planner
-from GPAD.Common.World import World
+from .Common.Utils.HUD import HUD
+from .Common.Planner import Planner
+from .Common.World import World
 
 try:
     import pygame

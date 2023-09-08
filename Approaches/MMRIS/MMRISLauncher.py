@@ -2,9 +2,9 @@ import math
 import threading
 
 import numpy as np
-from GPAD.Common.Utils.carla_utils import get_static_path, carla_vector2array_2d, get_index_offset
-from GPAD.Common.Utils.utils import SpeedPlan
-from GPAD.Common.Utils.agents.tools.misc import get_speed
+from ...Common.Utils.carla_utils import get_static_path, carla_vector2array_2d, get_index_offset
+from ...Common.Utils.utils import SpeedPlan
+from ...Common.Utils.agents.tools.misc import get_speed
 
 
 class GetPath(threading.Thread):

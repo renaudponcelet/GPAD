@@ -6,17 +6,17 @@ import carla
 import matplotlib.pyplot as plt
 import numpy as np
 import pygame
-from GPAD.Approaches.MMRIS.MMRISLauncher import RISLauncher
-from GPAD.Approaches.SGSPA.SGSPALauncher import VISLauncher
-from GPAD.Common.Utils.ControlLauncher import Controller
-from GPAD.Common.Utils.carla_utils import carla_vector2array_2d, array_wp2nd_array
-from GPAD.Common.Utils.controller import VehiclePIDController
-from GPAD.Common.Utils.utils import get_lazy_path, get_index_offset, norm_x_y, \
+from ..Approaches.MMRIS.MMRISLauncher import RISLauncher
+from ..Approaches.SGSPA.SGSPALauncher import VISLauncher
+from ..Common.Utils.ControlLauncher import Controller
+from ..Common.Utils.carla_utils import carla_vector2array_2d, array_wp2nd_array
+from ..Common.Utils.controller import VehiclePIDController
+from ..Common.Utils.utils import get_lazy_path, get_index_offset, norm_x_y, \
     find_nearest_vector, PathToShort
-from GPAD.Common.Utils.OccupancyViewer import OccupancyViewer
-from GPAD.Approaches.Common.occupancy_mapper import Tracker
-from GPAD.Approaches.Common.occupancy_mapper.VirtualVehicleGenerator import VirtualVehicleGenerator
-from GPAD.Common.Utils.agents.navigation.global_route_planner import GlobalRoutePlanner
+from ..Common.Utils.OccupancyViewer import OccupancyViewer
+from ..Approaches.Common.occupancy_mapper import Tracker
+from ..Approaches.Common.occupancy_mapper.VirtualVehicleGenerator import VirtualVehicleGenerator
+from ..Common.Utils.agents.navigation.global_route_planner import GlobalRoutePlanner
 
 
 class Planner(object):

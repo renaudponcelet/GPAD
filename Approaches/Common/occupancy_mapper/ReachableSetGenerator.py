@@ -2,7 +2,7 @@ import math
 
 import carla
 import numpy as np
-from GPAD.Common.Utils.utils import get_realistic_path
+from ....Common.Utils.utils import get_realistic_path
 from shapely.geometry import LineString, MultiLineString, Polygon, Point
 
 

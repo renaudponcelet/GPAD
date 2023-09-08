@@ -1,5 +1,5 @@
 import numpy as np
-from GPAD.Common.Utils.carla_utils import get_depth_in_meters
+from ....Common.Utils.carla_utils import get_depth_in_meters
 
 
 # REVIEW: useless without a semantic_segmentation sensor
