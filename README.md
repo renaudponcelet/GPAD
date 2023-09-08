@@ -30,7 +30,7 @@ R. Poncelet, A. Verroust-Blondet and F. Nashashibi. [[PDF]](https://hal.scien
 ## Requirements
 
 This package is made to be cloned into the "PythonAPI" folder in [CARLA](https://github.com/carla-simulator/carla).
-I also packaged it to allow "import GPAD".
+I also packaged it to allow "import GPAD" (see [PyPI](https://pypi.org/project/GPAD/)).
 
 It should run on Carla 0.9.14.
 
